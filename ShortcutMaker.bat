@@ -35,3 +35,12 @@ echo Done!
 echo Press any key to exit. 
 pause>nul
 exit
+
+:fileShortcut
+cls
+echo Address:
+set /p address= "--> "
+echo Shortcut Name: 
+set /p name="--> "
+echo. 
+echo Would you like to sto
