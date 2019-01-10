@@ -42,7 +42,7 @@ echo Address (no quotes):
 set /p address= "--> "
 echo Shortcut Name: 
 set /p name="--> "
-echo Would you like to automatically store backups of the target of this shortcut? Files within folders will not be backed up.
+echo Would you like to automatically store backups of the target of this shortcut? Folders within folders will not be backed up.
 echo 1= Yes
 echo 2= No
 set/p backupSet="--> "
