@@ -17,7 +17,7 @@ echo 1= Internet Shortcut
 ::echo 2= File Shortcut
 set /p shortcutType= "--> "
 if "%shortcutType%"=="1" goto internetShortcut
-::if "%shortcutType%"=="2" goto fileShortcut
+if "%shortcutType%"=="2" goto fileShortcut
 goto makeShortcut
 
 :internetShortcut
