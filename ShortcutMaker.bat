@@ -65,18 +65,18 @@ echo explorer "%address%"
 echo if %backup%==false exit
 echo cls
 echo Backing up file, please wait...
-echo rd /s /q "%appdata%\BatchShortcutMaker\%fileID%"
-echo md "%appdata%\BatchShortcutMaker\%fileID%"
-echo copy "%address%" "%appdata%\BatchShortcutMaker\%fileID%"
+echo rd /s /q "%appdata%\BatchShortcutMaker\%linkID%"
+echo md "%appdata%\BatchShortcutMaker\%linkID%"
+echo copy "%address%" "%appdata%\BatchShortcutMaker\%linkID%"
 echo exit
 echo :notexist
 echo cls
 echo echo File not found. 
-echo if exist "%appdata%\BatchShortcutMaker\%fileID%" (
+echo if exist "%appdata%\BatchShortcutMaker\%linkID%" (
 echo echo Backup was found!
 echo echo Open backup?
 echo pause
-echo explorer "%appdata%\BatchShortcutMaker\%fileID%"
+echo explorer "%appdata%\BatchShortcutMaker\%linkID%"
 echo exit
 echo ^)
 echo echo Sorry, backup was not found. 
