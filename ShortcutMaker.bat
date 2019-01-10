@@ -84,9 +84,10 @@ echo pause
 echo exit
 )>"%name%.link.bat"
 cls
-if not exist "%address%" goto fileDone
-echo Made Link. Backing up...
 rd /s /q "%appdata%\BatchShortcutMaker\%linkID%"
+if not exist "%address%" goto fileDone
+if %backup%==false goto fileDone
+echo Made Link. Backing up...
 md "%appdata%\BatchShortcutMaker\%linkID%"
 copy "%address%" "%appdata%\BatchShortcutMaker\%linkID%"
 :fileDone
