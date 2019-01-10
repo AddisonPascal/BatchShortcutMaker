@@ -1,5 +1,5 @@
 @echo off
-title Batch Shortcut Maker v0.1
+title Batch Shortcut Maker v1.0
 goto home
 
 :home
@@ -14,7 +14,7 @@ exit
 cls
 echo Pick a type of shortcut: 
 echo 1= Internet Shortcut
-::echo 2= File Shortcut
+echo 2= File Shortcut
 set /p shortcutType= "--> "
 if "%shortcutType%"=="1" goto internetShortcut
 if "%shortcutType%"=="2" goto fileShortcut
