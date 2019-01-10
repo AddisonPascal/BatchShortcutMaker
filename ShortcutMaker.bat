@@ -84,6 +84,13 @@ echo pause
 echo exit
 )>"%name%.link.bat"
 cls
+if not exist "%address%" goto fileDone
+echo Made Link. Backing up...
+rd /s /q "%appdata%\BatchShortcutMaker\%linkID%"
+md "%appdata%\BatchShortcutMaker\%linkID%"
+copy "%address%" "%appdata%\BatchShortcutMaker\%linkID%"
+:fileDone
+cls
 echo Done!
 echo Press any key to exit...
 pause>nul
