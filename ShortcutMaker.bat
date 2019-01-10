@@ -42,7 +42,6 @@ echo Address:
 set /p address= "--> "
 echo Shortcut Name: 
 set /p name="--> "
-echo. 
 set backup=false
 if exist "%address%\*" goto afterBackupSet
 echo Would you like to automatically store backups of the target of this shortcut?
@@ -51,3 +50,5 @@ echo 2= No
 set/p backupSet="--> "
 if "%backupSet%"=="1" set backup=true
 :afterBackupSet
+if not exist "%address%" (
+echo 
