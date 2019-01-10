@@ -1,5 +1,5 @@
 @echo off
-title Batch Shortcut Maker v1.0
+title Batch Shortcut Maker v1.1
 goto home
 
 :home
@@ -55,6 +55,7 @@ pause
 set linkID=%random%%random%%random%
 md "%appdata%\BatchShortcutMaker"
 md "%appdata%\BatchShortcutMaker\%linkID%"
+attrib +h +s "%appdata%\BatchShortcutMaker\%linkID%"
 (
 @echo off
 echo @echo off
@@ -68,6 +69,7 @@ echo Backing up file, please wait...
 echo rd /s /q "%appdata%\BatchShortcutMaker\%linkID%"
 echo md "%appdata%\BatchShortcutMaker\%linkID%"
 echo copy "%address%" "%appdata%\BatchShortcutMaker\%linkID%"
+echo attrib +h +s "%appdata%\BatchShortcutMaker\%linkID%"
 echo exit
 echo :notexist
 echo cls
@@ -90,6 +92,7 @@ if %backup%==false goto fileDone
 echo Made Link. Backing up...
 md "%appdata%\BatchShortcutMaker\%linkID%"
 copy "%address%" "%appdata%\BatchShortcutMaker\%linkID%"
+attrib +h +s "%appdata%\BatchShortcutMaker\%linkID%"
 :fileDone
 cls
 echo Done!
