@@ -42,13 +42,9 @@ echo Address:
 set /p address= "--> "
 echo Shortcut Name: 
 set /p name="--> "
-set backup=false
-if exist "%address%\*" goto afterBackupSet
-echo Would you like to automatically store backups of the target of this shortcut?
+echo Would you like to automatically store backups of the target of this shortcut? Files within folders will not be backed up.
 echo 1= Yes
 echo 2= No
 set/p backupSet="--> "
+set backup=false
 if "%backupSet%"=="1" set backup=true
-:afterBackupSet
-if not exist "%address%" (
-echo 
